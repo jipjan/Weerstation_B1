@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ testLuchtdruk()
+comment1.params=
+comment1.target=void\ testTemperatuur()
+comment2.params=
+comment2.target=void\ testLuchtVochtigheid()
+comment3.params=
+comment3.target=void\ testWindSnelheid()
+comment4.params=
+comment4.target=void\ testWindRichting()
+comment5.params=
+comment5.target=void\ testRegenmeter()
+comment6.params=
+comment6.target=void\ testUvIndex()
+comment7.params=
+comment7.target=void\ testBatterySpanning()
+comment8.params=
+comment8.target=void\ testSunRiseSet()
+numComments=9
