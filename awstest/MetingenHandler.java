@@ -1,7 +1,7 @@
 
 
 /**
- * Deze class bevat alle methoden voor het omzetten van meetwaarden in Nederlandse eenheden. 
+ * Deze class bevat alle methoden voor het omzetten van meetwaarden in Nederlandse eenheden.
  * @author Groep B1
  * @version 1.0
  */
@@ -16,7 +16,7 @@ public class MetingenHandler
     public static double luchtdruk(short mval) {
         return (mval/100d) * 3.3864d;
     }
-    
+
     /**
     * Temperatuur
     *
@@ -26,7 +26,7 @@ public class MetingenHandler
     public static double temperatuur(short mval) {
         return ((mval / 10d) - 32)/1.8d;
     }
-    
+
     /**
     * Relatieve Luchtvochtigheid
     *
@@ -36,7 +36,7 @@ public class MetingenHandler
     public static double luchtVochtigheid(short mval) {
         return mval;
     }
-    
+
     /**
     * Windsnelheid
     *
@@ -46,17 +46,18 @@ public class MetingenHandler
     public static double windSnelheid(short mval) {
         return (mval * 1.609344d);
     }
-    
+
     /**
     * Windrichting
     *
     * @param mval   Meetwaarde van het vp2pro weerstation
-    * @return De windrichting in graden
+    * @return De windrichting In windroos richtingen
     */
-    public static double windRichting(short mval) {
-        return mval;
+    public static String windRichting(short mval) {
+        String mogelijkWindrichting[] = {"N", "NO", "O", "ZO", "Z", "ZW", "W", "NW", "N"};
+        return mogelijkWindrichting[mval/45];
     }
-    
+
     /**
     * Regenmeter
     *
@@ -66,7 +67,7 @@ public class MetingenHandler
     public static double regenmeter(short mval) {
         return (mval*0.2);
     }
-    
+
     /**
     * uvIndex
     *
@@ -76,7 +77,7 @@ public class MetingenHandler
     public static double uvIndex(short mval) {
         return (mval/10);
     }
-    
+
     /**
     * batterySpanning
     *
@@ -86,7 +87,7 @@ public class MetingenHandler
     public static double batterySpanning(short mval) {
         return (((mval*300)/512d)/100d);
     }
-    
+
     /**
     * sunRise
     *
@@ -95,12 +96,12 @@ public class MetingenHandler
     */
     public static String sunRise(short mval) {
         String toReturn = Short.toString(mval);
-        if (toReturn.length() == 3) 
+        if (toReturn.length() == 3)
             return "0" + toReturn.substring(0,1) + ":" + toReturn.substring(1, 3);
         else
             return toReturn.substring(0,2) + ":" + toReturn.substring(2, 4);
-    }        
-        
+    }
+
     /**
     * sunSet
     *
