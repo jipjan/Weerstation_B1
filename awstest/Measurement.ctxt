@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Measurement()
+comment1.params=host\ port\ dbName\ userName\ password
+comment1.target=Measurement(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ This\ one\ is\ not\ needed\ for\ the\ assignment.\r\n
+comment10.params=
+comment10.target=double\ LuchtvochtigheidOutsideData()
+comment11.params=
+comment11.target=void\ PrintAlles()
+comment2.params=WS
+comment2.target=void\ setWeatherStation(WeatherStation)
+comment3.params=
+comment3.target=WeatherStation\ getWeatherStation()
+comment4.params=
+comment4.target=double\ BarometerData()
+comment5.params=
+comment5.target=double\ TemperatuurInsideData()
+comment6.params=
+comment6.target=double\ LuchtvochtigheidInsideData()
+comment7.params=
+comment7.target=double\ TemperatuurOutsideData()
+comment8.params=
+comment8.target=double\ WindSpeedData()
+comment9.params=
+comment9.target=java.lang.String\ WindRichtingData()
+numComments=12

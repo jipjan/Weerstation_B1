@@ -1,5 +1,3 @@
-
-
 /**
  * Deze class bevat alle methoden voor het omzetten van meetwaarden in Nederlandse eenheden. 
  * @author Groep B1
@@ -53,8 +51,10 @@ public class MetingenHandler
     * @param mval   Meetwaarde van het vp2pro weerstation
     * @return De windrichting in graden
     */
-    public static double windRichting(short mval) {
-        return mval;
+    public static String windRichting(short mval) {
+        String windR[] = {"N","NO","O","ZO","Z","ZW","W","NW","N"};
+        
+        return windR[mval/45];
     }
     
     /**
@@ -74,7 +74,7 @@ public class MetingenHandler
     * @return De windrichting in graden
     */
     public static double uvIndex(short mval) {
-        return (mval/10);
+        return (mval/10d);
     }
     
     /**
@@ -84,7 +84,7 @@ public class MetingenHandler
     * @return De battery spanning in Volt
     */
     public static double batterySpanning(short mval) {
-        return (((mval*300)/512d)/100d);
+        return (((mval*300d)/512d)/100d);
     }
     
     /**
