@@ -52,14 +52,8 @@ public class MetingenHandler
     * @return De windrichting In windroos richtingen
     */
     public static String windRichting(short mval) {
-<<<<<<< HEAD
         String mogelijkWindrichting[] = {"N", "NO", "O", "ZO", "Z", "ZW", "W", "NW", "N"};
         return mogelijkWindrichting[mval/45];
-=======
-        String windR[] = {"N","NO","O","ZO","Z","ZW","W","NW","N"};
-        
-        return windR[mval/45];
->>>>>>> 3484879fb1b695585a6be6d12b984da19e2e79ac
     }
 
     /**
