@@ -5,6 +5,23 @@ public class Measurement
 {
    private WeatherStation W;
    private MetingenHandler M;
+   private double Barometer;
+   private double InsideTemp;
+   private double OutsideTemp;
+   private double InsideHum;
+   private double OutsideHum;
+   private double WindSpeed;
+   private String WindDirection;
+   private double AvgWindSpeed;
+   private double RainRate;
+   private double UVindex;
+   private double Battery;
+   private String SunRise;
+   private String SunSet;
+   private double HeatIndex;
+   private double Dewpoint;
+   private double SolarRad;
+   private double WindChill;
    
    public Measurement()
    {
@@ -34,6 +51,11 @@ public class Measurement
    public double BarometerData()
    {
        return M.luchtdruk(W.getMostRecentBarometer());
+   }
+   
+   public void SetBarometerData()
+   {
+       
    }
    
    public double TemperatuurInsideData()
@@ -95,6 +117,8 @@ public class Measurement
    {
        return M.sunSet(W.getMostRecentSunset());
    }
+   
+   
    
 
    
