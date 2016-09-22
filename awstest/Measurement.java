@@ -3,7 +3,6 @@
  */
 public class Measurement
 {
-   //Dit is een atribuut. 
    private WeatherStation W;
    private MetingenHandler M;
    
@@ -13,7 +12,6 @@ public class Measurement
        M = new MetingenHandler();
    }
    
-   //Dit zorgt ervoor dat je er een andere database aan kan linken
    /**
     * This one is not needed for the assignment.
     */
@@ -58,6 +56,11 @@ public class Measurement
        return M.windSnelheid(W.getMostRecentWindSpeed());
    }
    
+   public double WindSpeedAvData()
+   {
+       return M.windSnelheid(W.getMostRecentAvgWindSpeed());       
+   }
+   
    public String WindRichtingData()
    {
        return M.windRichting(W.getMostRecentWindDir());
@@ -68,19 +71,51 @@ public class Measurement
        return M.luchtVochtigheid(W.getMostRecentOutsideHum());
    }
    
+   public double RainRateData()
+   {
+       return M.regenmeter(W.getMostRecentRainRate());
+   }
    
+   public double UVIndexData()
+   {
+       return M.uvIndex(W.getMostRecentUVLevel());
+   }
+   
+   public double BatteryData()
+   {
+       return M.batterySpanning(W.getMostRecentBattLevel());
+   }
+   
+   public String SunRiseData()
+   {
+       return M.sunRise(W.getMostRecentSunrise());
+   }
+   
+   public String SunSetData()
+   {
+       return M.sunSet(W.getMostRecentSunset());
+   }
+   
+
    
    public void PrintAlles()
    {
        System.out.println(
-       "Barometer: "+BarometerData()+"kPa"+
+       "Datum: "+
+       "\nBarometer: "+BarometerData()+"kPa"+
        "\nBinnentemperatuur: "+TemperatuurInsideData()+"C"+
        "\nBuitentemperatuur: "+TemperatuurOutsideData()+"C"+
        "\nLuchtvochtigheid binnen: "+LuchtvochtigheidInsideData()+"%"+
        "\nLuchtvochtigheid buiten: "+LuchtvochtigheidOutsideData()+"%"+
        "\nWindsnelheid: "+WindSpeedData()+" Km/U"+
        "\nWindrichting: "+WindRichtingData()+
-       "\n"
+       "\nGevoelstemperatuur: "+
+       "\nBatteryspanning: "+BatteryData()+ " Volt"+
+       "\nUV index: "+ UVIndexData()+
+       "\nZonneStraling: "+
+       "\nHeat index: "+
+       "\nZonsopgang: "+ SunRiseData()+
+       "\nZonsondergang: "+ SunSetData()
        
        );
    }
