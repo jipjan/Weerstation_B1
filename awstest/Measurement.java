@@ -112,7 +112,7 @@ public class Measurement
         double T2 = T * T;
         double R2 = R * R;
         
-        double answer = C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2);
+        double answer = ((C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2))-32)/1.8;
         return answer;
     }
    
@@ -131,7 +131,7 @@ public class Measurement
        "\nBatteryspanning: "+BatteryData()+ " Volt"+
        "\nUV index: "+ UVIndexData()+
        "\nZonneStraling: "+
-       "\nHeat index: "+
+       "\nHeat index: "+heatIndex()+"°C"+
        "\nDauwpunt: "+
        "\nZonsopgang: "+ SunRiseData()+
        "\nZonsondergang: "+ SunSetData()
