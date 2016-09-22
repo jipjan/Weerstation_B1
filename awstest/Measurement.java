@@ -165,22 +165,22 @@ public class Measurement
    public void PrintAlles()
    {
        System.out.println(
-       "Datum en tijd: "+Time()+
-       "\nBarometer: "+BarometerData()+"kPa"+
-       "\nBinnentemperatuur: "+TemperatuurInsideData()+"°C"+
-       "\nBuitentemperatuur: "+TemperatuurOutsideData()+"°C"+
-       "\nLuchtvochtigheid binnen: "+LuchtvochtigheidInsideData()+"%"+
-       "\nLuchtvochtigheid buiten: "+LuchtvochtigheidOutsideData()+"%"+
-       "\nWindsnelheid: "+WindSpeedData()+" Km/U"+
-       "\nWindrichting: "+WindRichtingData()+
-       "\nWindchill: "+windChill()+
-       "\nBatteryspanning: "+BatteryData()+ " Volt"+
-       "\nUV index: "+ UVIndexData()+
-       "\nZonneStraling: "+SolarRad()+" W/m²"+
-       "\nHeat index: "+heatIndex()+
-       "\nDauwpunt: "+dewPoint()+
-       "\nZonsopgang: "+ SunRiseData()+
-       "\nZonsondergang: "+ SunSetData()
+       "Datum en tijd: \t\t\t"+Time()+
+       "\nBarometer: \t\t\t"+BarometerData()+"kPa"+
+       "\nBinnentemperatuur: \t\t"+TemperatuurInsideData()+"°C"+
+       "\nBuitentemperatuur: \t\t"+TemperatuurOutsideData()+"°C"+
+       "\nLuchtvochtigheid binnen: \t"+LuchtvochtigheidInsideData()+"%"+
+       "\nLuchtvochtigheid buiten: \t"+LuchtvochtigheidOutsideData()+"%"+
+       "\nWindsnelheid: \t\t\t"+WindSpeedData()+" Km/U"+
+       "\nWindrichting: \t\t\t"+WindRichtingData()+
+       "\nWindchill: \t\t\t"+windChill()+
+       "\nBatteryspanning: \t\t"+BatteryData()+ " Volt"+
+       "\nUV index: \t\t\t"+ UVIndexData()+
+       "\nZonneStraling: \t\t\t"+SolarRad()+" W/m²"+
+       "\nHeat index: \t\t\t"+heatIndex()+
+       "\nDauwpunt: \t\t\t"+dewPoint()+
+       "\nZonsopgang: \t\t\t"+ SunRiseData()+
+       "\nZonsondergang: \t\t\t"+ SunSetData()
        
        );
    }
