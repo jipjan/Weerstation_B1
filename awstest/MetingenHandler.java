@@ -28,17 +28,6 @@ public class MetingenHandler
 	}
 
 	/**
-	* Relatieve Luchtvochtigheid
-	*
-	* @param mval   Meetwaarde van het vp2pro weerstation
-	* @return De relatieve luchtvochtigheid in procenten
-	*/
-	public static double luchtVochtigheid(short mval)
-	{
-		return mval;
-	}
-
-	/**
 	* Windsnelheid
 	*
 	* @param mval   Meetwaarde van het vp2pro weerstation
