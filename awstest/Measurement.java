@@ -96,7 +96,25 @@ public class Measurement
        return M.sunSet(W.getMostRecentSunset());
    }
    
-
+   public double heatIndex()
+    {
+        final double C1 = -42.379,
+                     C2 = 2.04901523,
+                     C3 = 10.14333127,
+                     C4 = -0.22475541,
+                     C5 = -0.00683783,
+                     C6 = -5.481717E-2,
+                     C7 = 1.22874E-3,
+                     C8 = 8.5282E-4,
+                     C9 = -1.99E-6;
+        double T = W.getMostRecentOutsideTemp()/10;
+        double R = LuchtvochtigheidOutsideData();
+        double T2 = T * T;
+        double R2 = R * R;
+        
+        double answer = C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2);
+        return answer;
+    }
    
    public void PrintAlles()
    {
@@ -114,6 +132,7 @@ public class Measurement
        "\nUV index: "+ UVIndexData()+
        "\nZonneStraling: "+
        "\nHeat index: "+
+       "\nDauwpunt: "+
        "\nZonsopgang: "+ SunRiseData()+
        "\nZonsondergang: "+ SunSetData()
        
